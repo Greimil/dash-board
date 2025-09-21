@@ -2,7 +2,7 @@
   --main-blue: #1992d4;
   --main-gray: #e2e8f0;
   --main-yellow: #fe5529;
-  --gray-txt:#86888a;
+  --gray-txt: #86888a;
 }
 
 body {
@@ -13,7 +13,8 @@ body {
   background: var(--main-gray);
 }
 
-a, a:visited {
+a,
+a:visited {
   color: inherit;
 }
 
@@ -38,7 +39,7 @@ a, a:visited {
 header {
   background-color: var(--main-blue);
   width: 100%;
- 
+
   color: white;
   display: flex;
   /* justify-content: space-between; */
@@ -98,6 +99,7 @@ main .navigationbar {
   border: none;
   padding: 5px 15px;
   min-height: 25px;
+  margin-right: 15px;
   background-color: var(--main-gray);
 }
 
@@ -135,7 +137,6 @@ main .navigationbar {
   display: flex;
   gap: 15px;
   align-items: center;
-  
 }
 
 .profile a {
@@ -169,7 +170,7 @@ main .navigationbar {
 }
 
 .container {
-  padding: 30px ;
+  padding: 30px;
   /* width: 100%; */
   display: flex;
 }
@@ -177,7 +178,6 @@ main .navigationbar {
 .grid-container {
   width: 75%;
   height: 100%;
-  
 }
 
 .grid-container h1 {
@@ -200,33 +200,31 @@ main .navigationbar {
   /* padding: 10px 0px; */
 }
 .card .text-area {
-    background-color: white;
-    height: 100%;
-    width: 99%;
-    border-radius: 10px;
+  background-color: white;
+  height: 100%;
+  width: 99%;
+  border-radius: 10px;
 }
 
 .card .text-area strong {
-    /* color: rgb(0, 0, 0); */
-    display: block;
+  /* color: rgb(0, 0, 0); */
+  display: block;
 }
 
-.text-area strong, p {
-    margin: 10px 10px;
-    
+.text-area strong,
+p {
+  margin: 10px 10px;
 }
 
 .text-area p {
-    font-size: 16px;
-} 
-
+  font-size: 16px;
+}
 
 .text-area .actionBtnCard {
-   
-    padding: 5px 20px 10px 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: end;
+  padding: 5px 20px 10px 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
 }
 .sidebar-flex {
   /* background: #157db5; */
@@ -236,85 +234,144 @@ main .navigationbar {
 }
 
 .sidebar-flex h2 {
-    
-    font-size: 16px;
-    /* padding: 0px 10px 0 10px; */
+  font-size: 16px;
+  /* padding: 0px 10px 0 10px; */
 }
 
 .title {
-    
 }
 
-
 .anuncios a {
-    text-decoration: none;
-    color: rgb(134, 136, 138);
-    display: block;
-    font-size: 14px;
-    padding-top: 5px;
-    border-bottom: 0.5px solid  rgb(134, 136, 138);;
+  text-decoration: none;
+  color: rgb(134, 136, 138);
+  display: block;
+  font-size: 14px;
+  padding-top: 5px;
+  border-bottom: 0.5px solid rgb(134, 136, 138);
 }
 
 .anuncios a h4 {
-    color: black;
-    margin: 0;
-    padding: 0px 10px 0 10px;
+  color: black;
+  margin: 0;
+  padding: 0px 10px 0 10px;
 }
 
 .anuncios {
-    height: 50%;
+  height: 50%;
 }
 
 .trendings {
-    padding: 30px 10px 0 10px;
-    /* background: #157db5; */
+  padding: 30px 10px 0 10px;
+  /* background: #157db5; */
 }
 
 .trending-item img {
-    max-width: 45px;
-    max-height: 45px;
-    border-radius: 50%;
+  max-width: 45px;
+  max-height: 45px;
+  border-radius: 50%;
 }
 
 .trending-item {
-    display: flex;
-    gap: 10px;
-    padding: 0px 0 10px;
-    align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 0px 0 10px;
+  align-items: center;
 }
 
 .trending-item div strong {
-    display: block;
-} 
+  display: block;
+}
 
 .trending-item div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .trending-item div p {
-    margin: 5px;
+  margin: 5px;
 }
 
 .hideShowMenu {
-    display: none !important;
+  display: none !important;
 }
 
 .menuBurger {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .menuBurger:hover {
-    color: black;
+  color: black;
 }
 .btn-toggle-theme:hover {
-    color: black;
-    cursor: pointer;
+  color: black;
+  cursor: pointer;
 }
 
 .darkmode {
+  background: #48494a !important;
+  color: white !important;
+}
 
-    background: #48494a !important;
-    color: white !important;
+.bodydark {
+    background: #cbd5e1 !important;
+}
 
+.showMenu {
+  display: block !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .sidebar-flex {
+    display: none;
+  }
+
+  .grid-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .navigationbar .noti {
+    gap: 10px;
+  }
+
+  .profile-actions {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .noti > a, .noti > img {
+    display: none;
+  }
+
+  .btn {
+    min-width: auto;
+  }
+
+  .profile-welcome {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .grid-container .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+   header {
+    position: fixed;      /* se queda fijo encima */
+    top: 0;
+    left: 0;
+    width: 100%;          /* ocupa todo el ancho */
+    height: 100%;         /* ocupa todo el alto */
+    max-width: none;      /* elimina el límite de 230px */
+    z-index: 1000;        /* para que quede encima del contenido */
+    flex-direction: column;
+  }
+
+  /* Opcional: darle un fondo sólido para que tape el contenido */
+  header {
+    background-color: var(--main-blue);
+  }
 }
